@@ -9,8 +9,8 @@ cd $(dirname "$0")/..
 
 # Build a new gem archive.
 
-rm -rf jekyll-seo-tag-*.gem
-gem build -q jekyll-seo-tag.gemspec
+rm -rf aemi-seo-tag-*.gem
+gem build -q aemi-seo-tag.gemspec
 
 # Make sure we're on the master branch.
 
@@ -21,7 +21,7 @@ gem build -q jekyll-seo-tag.gemspec
 
 # Figure out what version we're releasing.
 
-tag=v`ls jekyll-seo-tag-*.gem | sed 's/^jekyll-seo-tag-\(.*\)\.gem$/\1/'`
+tag=v`ls aemi-seo-tag-*.gem | sed 's/^aemi-seo-tag-\(.*\)\.gem$/\1/'`
 
 # Make sure we haven't released this version before.
 
@@ -34,5 +34,5 @@ git fetch -t origin
 
 # Tag it and bag it.
 
-gem push jekyll-seo-tag-*.gem && git tag "$tag" &&
+gem push aemi-seo-tag-*.gem && git tag "$tag" &&
   git push origin master && git push origin "$tag"

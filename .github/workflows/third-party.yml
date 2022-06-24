@@ -30,7 +30,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 5
-        path: jekyll-seo-tag
+        path: aemi-seo-tag
     - name: Checkout Third-Party Repository (WITHOUT SEO Tag)
       uses: actions/checkout@v2
       with:
@@ -59,4 +59,4 @@ jobs:
         bundle exec jekyll build -s sandbox -d sandbox/_site --trace
         bundle exec jekyll build -s sandbox -d sandbox/_site --trace
     - name: Memory Analysis of Jekyll Build (WITH SEO Tag)
-      run: bash jekyll-seo-tag/.github/workflows/scripts/memprof
+      run: bash aemi-seo-tag/.github/workflows/scripts/memprof

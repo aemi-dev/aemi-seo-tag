@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-bundle exec ruby jekyll-seo-tag/.github/workflows/scripts/memprof.rb sandbox
+bundle exec ruby aemi-seo-tag/.github/workflows/scripts/memprof.rb sandbox
 exit 0

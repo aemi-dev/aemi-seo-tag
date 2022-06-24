@@ -3,7 +3,7 @@
 require 'jekyll'
 require 'memory_profiler'
 
-MemoryProfiler.report(allow_files: 'lib/jekyll-seo-tag') do
+MemoryProfiler.report(allow_files: 'lib/aemi-seo-tag') do
   Jekyll::PluginManager.require_from_bundler
   Jekyll::Commands::Build.process({
     "source"             => File.expand_path(ARGV[0]),
